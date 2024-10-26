@@ -1,0 +1,35 @@
+# Function to perform the calculation
+def calculate(num1, num2, operator):
+    if operator == '+':
+        return num1 + num2
+    elif operator == '-':
+        return num1 - num2
+    elif operator == '*':
+        return num1 * num2
+    elif operator == '/':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero"
+    else:
+        return "Error: Invalid operator"
+
+# Main program
+def main():
+    # Taking input from the user
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        operator = input("Enter an operator (+, -, *, /): ")
+
+        # Calling the calculate function
+        result = calculate(num1, num2, operator)
+
+        # Displaying the result
+        print("Result:", result)
+    except ValueError:
+        print("Error: Please enter valid numbers.")
+
+# Run the main program
+if __name__ == "__main__":
+    main()
