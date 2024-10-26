@@ -1,0 +1,33 @@
+# Function to find the largest of three numbers
+def find_largest_number(num1, num2, num3):
+    if num1 >= num2:
+        if num1 >= num3:
+            return num1  # num1 is the largest
+        else:
+            return num3  # num3 is the largest
+    else:
+        if num2 >= num3:
+            return num2  # num2 is the largest
+        else:
+            return num3  # num3 is the largest
+
+# Main program
+def main():
+    # Taking input from the user
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        num3 = float(input("Enter the third number: "))
+
+        # Finding the largest number
+        largest = find_largest_number(num1, num2, num3)
+
+        # Displaying the result
+        print(f"The largest number is: {largest}")
+
+    except ValueError:
+        print("Please enter valid numbers.")
+
+# Running the main program
+if __name__ == "__main__":
+    main()
