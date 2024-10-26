@@ -1,0 +1,28 @@
+# Function to calculate average and determine grade
+def calculate_grade():
+    # Input: marks for three subjects
+    marks1 = float(input("Enter marks for subject 1: "))
+    marks2 = float(input("Enter marks for subject 2: "))
+    marks3 = float(input("Enter marks for subject 3: "))
+    
+    # Calculate average
+    average = (marks1 + marks2 + marks3) / 3
+    
+    # Determine grade based on average
+    if average >= 90:
+        grade = 'A'
+    elif 80 <= average < 90:
+        grade = 'B'
+    elif 70 <= average < 80:
+        grade = 'C'
+    elif 60 <= average < 70:
+        grade = 'D'
+    else:
+        grade = 'F'
+    
+    # Output: average and grade
+    print(f"Average marks: {average:.2f}")
+    print(f"Grade: {grade}")
+
+# Call the function
+calculate_grade()
