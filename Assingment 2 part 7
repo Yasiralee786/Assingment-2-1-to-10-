@@ -1,0 +1,24 @@
+# Function to calculate the final amount after applying discount
+def calculate_discounted_amount(total_amount):
+    if total_amount > 5000:
+        discount = 0.20  # 20% discount
+    elif total_amount >= 3000:
+        discount = 0.10  # 10% discount
+    else:
+        discount = 0.0  # No discount
+
+    final_amount = total_amount * (1 - discount)
+    return final_amount
+
+# Main program
+try:
+    # Input: Total shopping amount
+    total_amount = float(input("Enter the total shopping amount: "))
+
+    # Calculate final amount after discount
+    final_amount = calculate_discounted_amount(total_amount)
+
+    # Output the result
+    print(f"The final amount after discount is: {final_amount:.2f}")
+except ValueError:
+    print("Please enter a valid number.")
