@@ -1,24 +1,23 @@
-# Function to calculate the final amount after applying discount
-def calculate_discounted_amount(total_amount):
-    if total_amount > 5000:
-        discount = 0.20  # 20% discount
-    elif total_amount >= 3000:
-        discount = 0.10  # 10% discount
-    else:
-        discount = 0.0  # No discount
+#include <stdio.h>
 
-    final_amount = total_amount * (1 - discount)
-    return final_amount
-
-# Main program
-try:
-    # Input: Total shopping amount
-    total_amount = float(input("Enter the total shopping amount: "))
-
-    # Calculate final amount after discount
-    final_amount = calculate_discounted_amount(total_amount)
-
-    # Output the result
-    print(f"The final amount after discount is: {final_amount:.2f}")
-except ValueError:
-    print("Please enter a valid number.")
+int main() {
+    float amount, finalAmount;
+    
+    // Input: total shopping amount
+    printf("Enter the total shopping amount: ");
+    scanf("%f", &amount);
+    
+    // Decision control for discount calculation
+    if (amount > 5000) {
+        finalAmount = amount * 0.8; // 20% discount
+    } else if (amount >= 3000 && amount <= 5000) {
+        finalAmount = amount * 0.9; // 10% discount
+    } else {
+        finalAmount = amount; // No discount
+    }
+    
+    // Output: final amount after discount
+    printf("The final amount after discount is: %.2f\n", finalAmount);
+    
+    return 0;
+}
