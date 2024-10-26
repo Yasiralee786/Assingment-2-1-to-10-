@@ -1,35 +1,38 @@
-# Function to perform the calculation
-def calculate(num1, num2, operator):
-    if operator == '+':
-        return num1 + num2
-    elif operator == '-':
-        return num1 - num2
-    elif operator == '*':
-        return num1 * num2
-    elif operator == '/':
-        if num2 != 0:
-            return num1 / num2
-        else:
-            return "Error: Division by zero"
-    else:
-        return "Error: Invalid operator"
+#include <stdio.h>
 
-# Main program
-def main():
-    # Taking input from the user
-    try:
-        num1 = float(input("Enter the first number: "))
-        num2 = float(input("Enter the second number: "))
-        operator = input("Enter an operator (+, -, *, /): ")
+int main() {
+    float num1, num2, result;
+    char operator;
 
-        # Calling the calculate function
-        result = calculate(num1, num2, operator)
+    // Taking user input
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &operator);
 
-        # Displaying the result
-        print("Result:", result)
-    except ValueError:
-        print("Error: Please enter valid numbers.")
+    // Performing the operation based on the operator
+    if (operator == '+') {
+        result = num1 + num2;
+        printf("%.2f + %.2f = %.2f\n", num1, num2, result);
+    } else if (operator == '-') {
+        result = num1 - num2;
+        printf("%.2f - %.2f = %.2f\n", num1, num2, result);
+    } else if (operator == '*') {
+        result = num1 * num2;
+        printf("%.2f * %.2f = %.2f\n", num1, num2, result);
+    } else if (operator == '/') {
+        if (num2 != 0) {
+            result = num1 / num2;
+            printf("%.2f / %.2f = %.2f\n", num1, num2, result);
+        } else {
+            printf("Error: Division by zero is not allowed.\n");
+        }
+    } else {
+        printf("Error: Invalid operator.\n");
+    }
 
-# Run the main program
-if __name__ == "__main__":
-    main()
+    return 0;
+}
+
