@@ -1,15 +1,19 @@
-# Function to check if a year is a leap year
-def is_leap_year(year):
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        return True
-    else:
-        return False
+#include <stdio.h>
 
-# Input: Get the year from the user
-year = int(input("Enter a year: "))
+int main() {
+    int year;
 
-# Check if it is a leap year and display the result
-if is_leap_year(year):
-    print(f"{year} is a leap year.")
-else:
-    print(f"{year} is not a leap year.")
+    // Prompt user for input
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    // Check if the year is a leap year
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+
+    return 0;
+}
+
