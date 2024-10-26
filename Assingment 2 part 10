@@ -1,9 +1,23 @@
-# Ask the user for a username and password
-username = input("Enter your username: ")
-password = input("Enter your password: ")
+#include <stdio.h>
+#include <string.h>
 
-# Check if the username and password are correct
-if username == "admin" and password == "1234":
-    print("Login Successful")
-else:
-    print("Login Failed")
+int main() {
+    char username[50];
+    char password[50];
+
+    // Ask for username and password
+    printf("Enter username: ");
+    scanf("%s", username);
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    // Check credentials
+    if (strcmp(username, "admin") == 0 && strcmp(password, "1234") == 0) {
+        printf("Login Successful\n");
+    } else {
+        printf("Login Failed\n");
+    }
+
+    return 0;
+}
+
