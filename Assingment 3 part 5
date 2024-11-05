@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    float balance, withdrawalAmount;
+    char permit;
+
+    printf("Enter your account balance: ");
+    scanf("%f", &balance);
+    
+    printf("Enter the withdrawal amount: ");
+    scanf("%f", &withdrawalAmount);
+
+    
+    if (balance >= withdrawalAmount) {
+        
+        if (withdrawalAmount > 10000) {
+            
+            printf("Do you have a special withdrawal permit? (Y/N): ");
+            scanf(" %c", &permit); 
+            
+            if (permit == 'Y' || permit == 'y') {
+                printf("Withdrawal successful. You can withdraw %.2f.\n", withdrawalAmount);
+            } else {
+                printf("Withdrawal denied. You need a special permit for this amount.\n");
+            }
+        } else {
+            printf("Withdrawal successful. You can withdraw %.2f.\n", withdrawalAmount);
+        }
+  } else                   printf("Insufficient balance. You cannot withdraw %.2f.\n", withdrawalAmount);
+    }
+
+    return 0;
+}
