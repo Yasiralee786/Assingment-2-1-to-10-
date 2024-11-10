@@ -1,0 +1,16 @@
+def
+ time_spent_on_confessions():
+    
+    time_reading = int(input("Kitna waqt confessions padhne mein guzara (minutes mein): "))
+    time_writing = int(input("Kitna waqt confession likhne mein guzara (minutes mein): "))
+
+    total_time = time_reading + time_writing
+
+    if total_time > 120:
+        print("Oye! 2 ghante se zyada confessions mein laga diye? Itna waqt barbaad! Socho agar yeh 2 ghante parhai ya skill seekhne mein lagate to kidhar pohanch gaye hote! Zindagi mein kuch bara karna hai toh yeh confession waghera chor do, aur apne goals par focus karo!")
+    elif 60 <= total_time <= 120:
+        print("Abey yar, 1 se 2 ghante confessions par lagana thoda zyada ho gaya na? Dekho, thora socho kya yeh waqt waqayi mein tumhe agay leke ja raha hai? Zindagi mein aise activities ka balance rakhna seekho, warna regret ho ga baad mein!")
+    else:
+        print("Wah bhai, kamal kar rahe ho! Sirf thori der mein confessions check kar liya, aur phir apne kaam par wapas lag gaye. Isi tarah focus rakho, tum bahut agay jao ge. Parhai aur apne goals pe dhyan rakho shabash!")
+
+time_spent_on_confessions()
